@@ -1,0 +1,20 @@
+1) When we say that interfaces can be satisfied implicitly, we mean that..
+    - We don't have to write any extra code to say that some type satisfies an interface
+
+2) To say that a type satisfies an interface means that...
+    - The type implements all of the functions contains in the interface definition
+
+3) In the following code, does the square type satisfy the shape interface?
+    - Yes, because square defines the area function that returns an int
+
+4) Take a look at the following code.  Does the rectangle type satisfy the shape  interface?
+    - No, because rectangle's version of the areafunction returns a float64, but the shape interface expects a return type of int
+
+5) Take a look at the following code.  Type square appears to successfully implement the shape interface, but the implementation of square 's area function looks broken - it always returns a value of 10 no matter what the side length of the square is.  Will the shape  interface do anything to help us catch this error?
+    - No, interfaces are only used to help with types.  We can still easily write code that does something completely wrong.
+
+6) Types that implement the Reader interface are generally used to...
+    - Read information from an outside data source into our application
+
+7) Imagine that you ask a coworker to create a new type that implements the Reader  interface to take data from a text file and print it on the screen.  They presen...
+    - I would say that while the textFileReader type conforms to the requirements of the Reader interface, it doesn't actually implement the desired behavior of reading a file from the hard drive
